@@ -249,3 +249,24 @@ window.PRESETS = [
   { id: "draussen", name: "Draußen und mit den Sinnen", desc: "Schöpfungsgang, Foto oder Zeichnung, Dankrunde.", ids: ["a3", "b5", null, "d3", "e2"] },
   { id: "kreativ", name: "Schreiben und Denken", desc: "Körper-Reise, Philosophieren, Elfchen.", ids: ["a2", "b2", "c3", "d2", "e3"] }
 ];
+
+// Vorbereitungsliste pro Methode (wird im gedruckten Plan zusammengefasst)
+window.NEEDS = {
+  a1: ["Folien (Beamer)"],
+  a2: ["Folien (Beamer)"],
+  a3: ["Stoffbeutel", "Muschel, Tannenzapfen, Feder, Stein oder Rinde", "Arbeitsblatt Fühlbeutel (ein Blatt pro Kind)"],
+  b1: ["Folien (Beamer)", "Haftnotizen oder Zettel, etwa 8 pro Kind"],
+  b2: ["Folien (Beamer)"],
+  b3: ["Folien (Beamer)", "Haftnotizen oder Zettel, etwa 8 pro Kind"],
+  b4: ["Stationenkarten drucken und ausschneiden", "Laufzettel (ein Blatt pro Kind)", "Lupen, Rinde, Stein, Moos, Kräuter oder Gewürze in Döschen, Mikroskop oder Handylupe"],
+  b5: ["Aufgabenkarten drucken und ausschneiden", "Laufzettel (ein Blatt pro Kind)", "Stifte, ggf. Tablet für Fotos"],
+  c1: ["Satzanfänge an der Tafel oder auf der Folie"],
+  c2: ["Zettel für Schätzungen", "Lösungsseite der Schätzkarten, Zahlen vorab prüfen"],
+  c3: ["Denkfragen-Karten drucken und ausschneiden"],
+  d1: ["Staunkarten drucken (ein bis zwei pro Kind)", "Wand-Überschrift WUNDER", "Klebeband oder Pinnwand, Stifte"],
+  d2: ["Arbeitsblatt Elfchen (ein Blatt pro Kind)"],
+  d3: ["Arbeitsblatt Mein Wunder (ein Blatt pro Kind)", "Buntstifte, ggf. Tablet"],
+  e1: ["Wunderwand aus der vorigen Phase"],
+  e2: ["Stein oder Kerze für den Kreis", "Dankkarten nur bei Bedarf"],
+  e3: ["Fenster oder ruhige Musik"]
+};

@@ -276,8 +276,26 @@
       }
       h += '<div class="m">Hinweis: ' + esc(m.tip) + "</div></div>";
     });
+    // Gesamte Vorbereitungsliste, ohne Doppelungen
+    var seen = {}, needs = [];
+    chosen().forEach(function (m) {
+      if (!m) return;
+      (window.NEEDS[m.id] || []).forEach(function (n) { if (!seen[n]) { seen[n] = 1; needs.push(n); } });
+    });
+    if (needs.length) {
+      h += '<div class="blk" style="--c:#c8962e"><h2>Vorbereitungsliste</h2><ol>' +
+        needs.map(function (n) { return "<li>" + esc(n) + "</li>"; }).join("") + "</ol></div>";
+    }
     box.innerHTML = h + "</div>";
   }
+
+  /* ---------- Folien für meinen Weg ---------- */
+  function openSlides(e) {
+    if (e) e.preventDefault();
+    window.open("folien.html#weg=" + encodeState(), "_blank", "noopener");
+  }
+  $("#openSlides").addEventListener("click", openSlides);
+  $("#slidesMine").addEventListener("click", openSlides);
 
   $("#printPlan").addEventListener("click", function () {
     buildPlanPrint();
