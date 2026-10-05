@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Staunen über die Schöpfung</title>
+<meta name="description" content="Stunden-Baukasten für Religion in der 8. Klasse: Wege wählen, Methoden vergleichen, Material ausdrucken.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f3a5f'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23fff' stroke-opacity='.35' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='13' fill='none' stroke='%23fff' stroke-opacity='.65' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23c8962e'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+
+  <aside class="side">
+    <div class="id">
+      <svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1f3a5f"/><circle cx="32" cy="32" r="22" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="3"/><circle cx="32" cy="32" r="13" fill="none" stroke="#fff" stroke-opacity=".65" stroke-width="3"/><circle cx="32" cy="32" r="5" fill="#c8962e"/></svg>
+      <div><div class="kicker">Religion, 8. Klasse</div><h1>Staunen über die Schöpfung</h1></div>
+    </div>
+    <p class="lead">Das Thema steht fest, den Weg wählst du. Klick dich durch das Diagramm und stelle dir deine Stunde zusammen.</p>
+    <nav class="mainnav" aria-label="Bereiche">
+      <a href="#start">Start</a><a href="#baukasten">Baukasten</a><a href="#bibliothek">Material</a><a href="#hinweise">Hinweise</a>
+    </nav>
+
+    <div class="panel" aria-live="polite">
+      <h2>Mein Weg</h2>
+      <ul class="weg" id="weglist"></ul>
+      <div class="timebar" id="timebar"></div>
+      <div class="timetext" id="timetext"></div>
+      <div class="actions">
+        <button class="btn primary" id="printPlan" type="button">Meinen Plan drucken oder als PDF</button>
+        <button class="btn" id="copyLink" type="button">Meinen Weg als Link teilen</button>
+      </div>
+      <div class="linkrow" id="linkrow"><input id="linkinput" readonly aria-label="Link zu meinem Weg"></div>
+    </div>
+
+    <div class="sidefoot"><span>Lehrplan KR8, Lernbereich 3</span><button class="theme" id="theme" type="button">Dunkel</button></div>
+  </aside>
+
+  <main>
+    <section id="start">
+      <div class="hero">
+        <h2>Eine Stunde, die Staunen möglich macht</h2>
+        <p>Jugendliche staunen nicht auf Kommando. Diese Stunde baut Bedingungen dafür: Stille, überraschende Größenordnungen, die eigenen Sinne und ein Ort, an dem das Staunen sichtbar wird. Wie du dorthin kommst, entscheidest du.</p>
+        <div class="chiprow"><span>45 Minuten</span><span>5 Phasen</span><span>16 Methoden</span><span>10 Materialien zum Drucken</span></div>
+      </div>
+    </section>
+
+    <section id="baukasten">
+      <div class="secthead">
+        <div>
+          <h2>Dein Weg durch die Stunde</h2>
+          <p>Wähle in jeder Phase eine Methode. Phasen kannst du auch auslassen. Mit Klick auf "Details" siehst du den genauen Ablauf mit Formulierungen. Unten links rechnet die Seite mit, ob es in 45 Minuten passt.</p>
+        </div>
+      </div>
+      <h3>Fertige Wege als Startpunkt</h3>
+      <div class="presets" id="presets"></div>
+      <div class="board" id="board">
+        <svg id="links" aria-hidden="true"></svg>
+        <div class="cols" id="cols" role="radiogroup" aria-label="Methoden pro Phase"></div>
+      </div>
+      <p class="legend">Die gestrichelte Linie zeigt deinen Weg. Aufwand beschreibt die Vorbereitung vorab, nicht die Stunde selbst.</p>
+    </section>
+
+    <section id="bibliothek">
+      <div class="secthead">
+        <div>
+          <h2>Alle Methoden im Überblick</h2>
+          <p>Zum Stöbern, ohne etwas zu wählen. Ein Klick öffnet die Details.</p>
+        </div>
+      </div>
+      <div class="lib" id="lib"></div>
+
+      <h3 style="margin-top:30px">Material zum Ausdrucken</h3>
+      <div class="mat">
+        <a href="material/bildfolgen.html"><em>Lehrkraft</em><b>Bildfolgen und Quellen</b><span>Maßstabsreise nach außen und innen, Suchbegriffe, freie Bildquellen.</span></a>
+        <a href="material/fuehlbeutel.html"><em>Arbeitsblatt</em><b>Fühlbeutel</b><span>Ertasten, beschreiben, überrascht werden.</span></a>
+        <a href="material/stationenkarten.html"><em>Karten und Laufzettel</em><b>Sinnes-Stationen</b><span>Sechs Stationen mit Laufzettel.</span></a>
+        <a href="material/schoepfungsgang.html"><em>Karten und Laufzettel</em><b>Schöpfungsgang</b><span>Acht Aufgabenkarten für draußen.</span></a>
+        <a href="material/schaetzkarten.html"><em>Lehrkraft und Karten</em><b>Schätzkarten</b><span>Schätzfragen mit Lösungsseite und Prüffeld.</span></a>
+        <a href="material/denkfragen.html"><em>Karten</em><b>Denkfragen</b><span>Gedankenexperiment und acht Fragen zum Philosophieren.</span></a>
+        <a href="material/staunkarten.html"><em>Karten</em><b>Staunkarten und Wunderwand</b><span>Wand-Überschrift, Karten, Satzanfänge.</span></a>
+        <a href="material/elfchen.html"><em>Arbeitsblatt</em><b>Staun-Elfchen</b><span>Gedicht aus elf Wörtern mit Beispiel.</span></a>
+        <a href="material/mein-wunder.html"><em>Arbeitsblatt</em><b>Mein Wunder des Alltags</b><span>Zeichnen oder Foto, drei Fragen.</span></a>
+        <a href="material/dankkarten.html"><em>Karten und Anleitung</em><b>Dankrunde</b><span>Anleitung, Impulskarte, Dankkarten.</span></a>
+      </div>
+    </section>
+
+    <section id="hinweise">
+      <div class="secthead"><div><h2>Hinweise für die Planung</h2></div></div>
+      <div class="notes">
+        <div class="note"><b>Staunen nicht erklären</b><p>Zeit und Stille sind die wichtigste Methode. Erst reagieren lassen, dann einordnen.</p></div>
+        <div class="note"><b>Zahlen prüfen</b><p>Viele Zahlen sind Schätzwerte. Vor dem Einsatz mit Quelle gegenprüfen. Die Schätzkarten haben ein Prüffeld.</p></div>
+        <div class="note"><b>Rechte an Bildern</b><p>NASA, ESA/Hubble und Wikimedia haben eigene Nutzungsregeln. Quelle auf der Folie nennen.</p></div>
+        <div class="note"><b>Offen bleiben</b><p>Die Frage "Woher kommt das alles?" bleibt am Ende offen. Antworten folgen in den nächsten Stunden.</p></div>
+        <div class="note"><b>Wenn die Klasse blockt</b><p>"Ich staune nicht, weil …" gleichwertig zulassen. Niemand muss etwas fühlen, was er nicht fühlt.</p></div>
+        <div class="note"><b>Körper sensibel behandeln</b><p>Immer vom Wunder sprechen, dass es funktioniert. Nie von einem perfekten Körper.</p></div>
+      </div>
+
+      <h3 style="margin-top:30px">Anschluss an die Folgestunden</h3>
+      <div class="notes">
+        <div class="note"><b>Stunde 2: Woher kommt das alles?</b><p>Naturwissenschaft (Wie?) und Glaube (Warum?) als zwei Antwortwege. Kompetenz 3.</p></div>
+        <div class="note"><b>Stunde 3: Genesis 1 bis 3</b><p>Schöpfungstexte im Vergleich zu außerbiblischen Mythen. Kompetenz 2.</p></div>
+        <div class="note"><b>Stunde 4: Dank und Lob</b><p>Die Wunderkarten werden zu einem gemeinsamen Dankpsalm (Psalm 104). Kompetenz 1 und 2.</p></div>
+        <div class="note"><b>Stunde 5: Verantwortung</b><p>Was machen wir mit dem Geschenk? Umweltzerstörung an aktuellen Beispielen. Kompetenz 4.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Grundlage: LehrplanPLUS Bayern, Mittelschule, Katholische Religionslehre 8, Lernbereich 3 "Schöpfung, Geschenk und Verantwortung", Kompetenz 1. Zusammengestellt für die Unterrichtsvorbereitung. Alle Materialien sind zum Drucken gedacht.
+    </footer>
+  </main>
+</div>
+
+<dialog id="dlg" aria-label="Methoden-Details"></dialog>
+<div id="planprint"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
